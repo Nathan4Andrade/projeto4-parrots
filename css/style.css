@@ -106,12 +106,13 @@ img {
 
 .timer {
   position: absolute;
-  right: 40px;
+  right: 18px;
+  top: 16px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 32px;
-  line-height: 66px;
+  font-size: 36px;
+  line-height: 42px;
   letter-spacing: -0.004em;
 
   margin: 40px 0;
