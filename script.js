@@ -1,7 +1,7 @@
-let PARROTS = [
+let parrots = [
   "../img/bobrossparrot.gif",
   "../img/explodyparrot.gif",
-  "../img/iestaparrot.gif",
+  "../img/fiestaparrot.gif",
   "../img/metalparrot.gif",
   "../img/revertitparrot.gif",
   "../img/tripletsparrot.gif",
@@ -9,7 +9,8 @@ let PARROTS = [
 ];
 
 let qtdCards = 0;
-const cards = [];
+const deckOfCards = [];
+let move = [];
 const ulCards = document.querySelector(".cards");
 
 function startGame() {
@@ -20,7 +21,15 @@ function startGame() {
 
   displayCards(qtdCards);
   for (let i = 0; i < qtdCards; i++) {
-    ulCards.innerHTML += `<li onClick="clickCard()" class="card"></li>`;
+    ulCards.innerHTML += `<li onClick="clickCards(this)" class="card"> 
+                               <div class="front-face face">
+                                    <img data-test="face-down-image" src="../img/back.png" alt="">
+                                </div>
+                                <div class="back-face face">
+                                    <img data-test="face-up-image" src="${parrots[i]}" alt="">
+                                </div>
+                                
+                            </li>`;
   }
 }
 
@@ -38,6 +47,37 @@ function displayCards(qtdCards) {
   } else if (qtdCards == 14) {
     ulCards.classList.add("fourteen");
   }
+}
+
+function comparator() {
+  return Math.random() - 0.5;
+}
+
+function shuffleCards() {
+  return deckOfCards.sort(comparator);
+}
+
+function shuffleInitialVariables() {
+  return parrots.sort(comparator);
+}
+
+function clickCards(clickedCard) {
+  if (isAValidCard(clickedCard)) {
+    clickedCard.classList.toggle("flipped");
+    move.push(clickedCard);
+
+    if (move.length === 2) {
+      preventsAdditionalClicks();
+      checksIdenticalsCards();
+    }
+  }
+}
+
+function isAValidCard(card) {
+  const flipped = card.classList.contains("flipped");
+  const right = card.classList.contains("rigth");
+
+  return !flipped || !right;
 }
 
 startGame();

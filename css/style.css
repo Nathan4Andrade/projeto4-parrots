@@ -1,5 +1,12 @@
+* {
+  --color-title: #75b79e;
+  --color-card: #a7e9af;
+  --color-background: #eef9bf;
+  --color-card-border: #99cea8;
+}
+
 body {
-  background-color: #eef9bf;
+  background-color: var(--color-background);
 }
 
 header {
@@ -18,7 +25,7 @@ h1 {
 
   margin: 40px 0;
 
-  color: #75b79e;
+  color: var(--color-title);
 }
 
 main {
@@ -53,19 +60,43 @@ main {
 .fourteen {
   max-width: 1050px;
 }
+
+img {
+  height: 100px;
+  width: 100px;
+}
 .card {
   box-sizing: border-box;
 
   width: 117px;
   height: 146px;
 
-  background: #a7e9af;
-  border: 1px solid #99cea8;
+  position: relative;
+}
+
+.face {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: var(--color-card);
+  border: 1px solid var(--color-card-border);
   border-radius: 5px;
-  background-image: url(../img/back.png);
-  background-size: 80%;
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: transform 0.5s;
+  backface-visibility: hidden;
+  transition: all 0.5s;
   transform-style: preserve-3d;
+}
+
+.back-face {
+  transform: rotateY(180deg);
+}
+
+.card.flipped .back-face {
+  transform: rotateY(0deg);
+}
+
+.card.flipped .front-face {
+  transform: rotateY(-180deg);
 }
