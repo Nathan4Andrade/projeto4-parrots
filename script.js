@@ -126,7 +126,6 @@ function checksIdenticalsCards() {
   if (firstMove.innerHTML === secondMove.innerHTML) {
     firstMove.classList.add("right");
     secondMove.classList.add("right");
-    console.log("igual");
     setTimeout(checkTheEndOfTheGame, 500);
   } else {
     setTimeout(turnCardToInitialPosition, 1000);
