@@ -19,6 +19,38 @@ h1 {
   color: #75b79e;
 }
 
+main {
+  width: 100%;
+}
+.cards {
+  height: 360px;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.four {
+  max-width: 300px;
+}
+.six {
+  max-width: 450px;
+}
+.eight {
+  max-width: 600px;
+}
+.ten {
+  max-width: 750px;
+}
+.twelve {
+  max-width: 900px;
+}
+.fourteen {
+  max-width: 1050px;
+}
 .card {
   box-sizing: border-box;
 
@@ -28,4 +60,8 @@ h1 {
   background: #a7e9af;
   border: 1px solid #99cea8;
   border-radius: 5px;
+  background-image: url(../img/back.png);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
