@@ -20,7 +20,7 @@ function startGame() {
 
   displayCards(qtdCards);
   for (let i = 0; i < qtdCards; i++) {
-    ulCards.innerHTML += `<li onClick="clickCard" class="card"></li>`;
+    ulCards.innerHTML += `<li onClick="clickCard()" class="card"></li>`;
   }
 }
 
