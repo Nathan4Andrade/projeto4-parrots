@@ -32,7 +32,7 @@ main {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  flex-direction: column;
+  gap: 34px;
 }
 
 .four {

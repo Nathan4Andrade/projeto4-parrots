@@ -1,11 +1,11 @@
 let PARROTS = [
-  "bobrossparrot",
-  "explodyparrot",
-  "fiestaparrot",
-  "metalparrot",
-  "revertitparrot",
-  "tripletsparrot",
-  "unicornparrot",
+  "../img/bobrossparrot.gif",
+  "../img/explodyparrot.gif",
+  "../img/iestaparrot.gif",
+  "../img/metalparrot.gif",
+  "../img/revertitparrot.gif",
+  "../img/tripletsparrot.gif",
+  "../img/unicornparrot.gif",
 ];
 
 let qtdCards = 0;
