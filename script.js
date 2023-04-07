@@ -45,7 +45,7 @@ function renderCards() {
 
 function createCard(index) {
   const parrot = parrots[index];
-  const cardHTML = `<li onClick="clickCards(this)" class="card"> 
+  const cardHTML = `<li onClick="clickCards(this)" class="card" data-test="card"> 
                                <div class="front-face face">
                                     <img data-test="face-down-image" src="./img/back.png" alt="">
                                 </div>
