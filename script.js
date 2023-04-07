@@ -160,7 +160,7 @@ function checkTheEndOfTheGame() {
 }
 
 function restartGame() {
-  const restart = prompt("Você gostaria de reiniciar a partida?");
+  const restart = prompt("Você gostaria de reiniciar a partida? (sim ou não)");
 
   if (restart === "sim") {
     window.location.reload(true);
