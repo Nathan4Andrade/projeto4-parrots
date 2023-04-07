@@ -100,3 +100,6 @@ img {
 .card.flipped .front-face {
   transform: rotateY(-180deg);
 }
+.no-click {
+  pointer-events: none;
+}
