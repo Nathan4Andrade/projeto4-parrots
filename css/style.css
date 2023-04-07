@@ -103,3 +103,18 @@ img {
 .no-click {
   pointer-events: none;
 }
+
+.timer {
+  position: absolute;
+  right: 40px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 66px;
+  letter-spacing: -0.004em;
+
+  margin: 40px 0;
+
+  color: var(--color-title);
+}
