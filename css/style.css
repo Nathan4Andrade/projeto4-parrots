@@ -1,0 +1,31 @@
+body {
+  background-color: #eef9bf;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 66px;
+  letter-spacing: -0.004em;
+
+  color: #75b79e;
+}
+
+.card {
+  box-sizing: border-box;
+
+  width: 117px;
+  height: 146px;
+
+  background: #a7e9af;
+  border: 1px solid #99cea8;
+  border-radius: 5px;
+}
