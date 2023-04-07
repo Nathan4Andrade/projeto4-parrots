@@ -26,9 +26,13 @@ renderCards();
 interval = setInterval(startsTimer, 1000);
 
 function startGame() {
-  qtdCards = prompt("Com quantas cartas você quer jogar?");
+  qtdCards = prompt(
+    "Com quantas cartas você quer jogar? Escolha entre 4 e 14."
+  );
   while (qtdCards % 2 !== 0 || qtdCards < 4 || qtdCards > 14) {
-    qtdCards = prompt("Com quantas cartas você quer jogar?");
+    qtdCards = prompt(
+      "Com quantas cartas você quer jogar? Escolha entre 4 e 14."
+    );
   }
 }
 
