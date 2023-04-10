@@ -148,7 +148,7 @@ function checkTheEndOfTheGame() {
 
   if (qtdCards == numberOfFlippedCards) {
     alert(
-      `Você ganhou em ${counter} jogadas! A duração do jogo foi de ${timer} segundos`
+      `Você ganhou em ${counter} jogadas! A duração do jogo foi de ${timer} segundos!`
     );
     clearInterval(interval);
     restartGame();
