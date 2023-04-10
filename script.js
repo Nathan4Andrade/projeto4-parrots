@@ -46,14 +46,13 @@ function renderCards() {
 function createCard(index) {
   const parrot = parrots[index];
   const cardHTML = `<li onClick="clickCards(this)" class="card" data-test="card"> 
-                               <div class="front-face face">
-                                    <img data-test="face-down-image" src="./img/back.png" alt="">
-                                </div>
-                                <div class="back-face face">
-                                    <img data-test="face-up-image" src="${parrot}" alt="${parrot}">
-                                </div>
-                                
-                            </li>`;
+                        <div class="front-face face">
+                            <img data-test="face-down-image" src="./img/back.png" alt="">
+                          </div>
+                          <div class="back-face face">
+                            <img data-test="face-up-image" src="${parrot}" alt="${parrot}">
+                          </div>
+                    </li>`;
   return cardHTML;
 }
 
@@ -64,7 +63,6 @@ function makePairs() {
     deckOfCards.push(card);
     deckOfCards.push(card);
   }
-
   return deckOfCards;
 }
 
@@ -147,11 +145,12 @@ function turnCardToInitialPosition() {
 
 function checkTheEndOfTheGame() {
   const numberOfFlippedCards = document.querySelectorAll(".right").length;
-  const successMessage = `Você ganhou em ${counter} jogadas! A duração do jogo foi de ${timer} segundos`;
 
   if (qtdCards == numberOfFlippedCards) {
     clearInterval(interval);
-    alert(successMessage);
+    alert(
+      `Você ganhou em ${counter} jogadas! A duração do jogo foi de ${timer} segundos`
+    );
     restartGame();
   } else {
     allowClicks();
