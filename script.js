@@ -147,10 +147,10 @@ function checkTheEndOfTheGame() {
   const numberOfFlippedCards = document.querySelectorAll(".right").length;
 
   if (qtdCards == numberOfFlippedCards) {
-    clearInterval(interval);
     alert(
       `Você ganhou em ${counter} jogadas! A duração do jogo foi de ${timer} segundos`
     );
+    clearInterval(interval);
     restartGame();
   } else {
     allowClicks();
