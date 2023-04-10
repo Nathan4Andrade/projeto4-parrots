@@ -22,7 +22,7 @@ h1 {
   font-size: 56px;
   line-height: 66px;
   letter-spacing: -0.004em;
-
+  text-align: center;
   margin: 40px 0;
 
   color: var(--color-title);
@@ -116,4 +116,16 @@ img {
   letter-spacing: -0.004em;
 
   color: var(--color-title);
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 46px;
+  }
+  .cards {
+    margin: 0 100px;
+  }
+  .timer {
+    font-size: 20px;
+  }
 }
